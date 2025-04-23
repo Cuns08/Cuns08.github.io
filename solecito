@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¡Una declaración especial!</title>
+    <style>
+        body {
+            background-color: #ffe4e1;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        h1 {
+            color: #d2691e;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .yes:hover {
+            background-color: #45a049;
+        }
+        .no {
+            background-color: #f44336;
+            color: white;
+        }
+        .no:hover {
+            background-color: #da190b;
+        }
+        #response {
+            margin-top: 30px;
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Hola solecito!</h1>
+    <p>Quiero decirte algo muy importante... desde que nos conocí me senti muy especial por eso, no se si te sentirias igual por eso te hago esto para ti ¿Quieres ser mi novia?</p>
+    <div class="buttons">
+        <button class="yes" onclick="responder('sí')">Sí</button>
+        <button class="no" onclick="responder('no')">No</button>
+    </div>
+    <div id="response"></div>
+
+    <script>
+        function responder(respuesta) {
+            const respuestaDiv = document.getElementById('response');
+            if (respuesta === 'sí') {
+                respuestaDiv.innerHTML = "¡Gracias! Me alegra mucho que digas que sí. 😊";
+            } else {
+                respuestaDiv.innerHTML = "Entiendo, gracias por ser honesta. 😊";
+            }
+        }
+    </script>
+</body>
+</html>
